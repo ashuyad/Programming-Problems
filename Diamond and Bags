@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    double count;
+	    count=(log10(n)/log10(3));
+	    cout<<ceil(count)<<endl;
+	}
+	return 0;
+}
