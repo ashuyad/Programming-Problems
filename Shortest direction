@@ -1,0 +1,59 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   int t;
+   cin>>t;
+   while(t--)
+   {
+       int i,e=0,w=0,n=0,s=0;
+       string st;
+       cin>>st;
+       for(i=0;i<st.length();i++)
+       {
+           if(st[i]=='E')
+            e++;
+           else if(st[i]=='W')
+            w++;
+           else if(st[i]=='N')
+            n++;
+           else if(st[i]=='S')
+            s++;
+       }
+       if(e>w)
+       {
+           int ans1=e-w;
+           while(ans1--)
+          {
+             cout<<'E';
+
+          }
+       }
+       if(n>s)
+       {
+           int ans2=n-s;
+           while(ans2--)
+            {cout<<'N';
+           }
+       }
+       if(s>n)
+       {
+           int ans3=s-n;
+           while(ans3--)
+            {cout<<'S';
+           }
+       }
+       if(w>e)
+       {
+           int ans4=w-e;
+           while(ans4--)
+           {
+              cout<<'W';
+
+           }
+       }
+       cout<<endl;
+   }
+	return 0;
+}
