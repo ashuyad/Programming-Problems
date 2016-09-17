@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+    {
+        int n,i,j;
+        cin>>n;
+        int a[n*n];
+        for(i=0;i<n*n;i++)
+            cin>>a[i];
+        int arr[n];
+        i=0,j=1;
+        while(i<n*n)
+        {
+           int k=0,flag=0;
+           while(k<j)
+           {
+               if(a[i]==arr[k])
+               {
+                   flag=1;
+                   break;
+               }
+               else
+                k++;
+
+           }
+           if(flag==0)
+               {
+                   arr[j]=a[i];
+                   i=(n*j);
+                   j++;
+               }
+           else
+           {
+               i++;
+           }
+
+        }
+        for(j=1;j<=n;j++)
+            cout<<arr[j]<<" ";
+
+        cout<<endl;
+
+    }
+	return 0;
+}
