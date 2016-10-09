@@ -1,0 +1,43 @@
+/* 
+The structure of the node of the stack is
+struct StackNode
+{
+    int data;
+    StackNode *next;
+};
+
+and the structure of the class is
+class Stack {
+private:
+  StackNode *top;
+public :
+    void push(int);
+    int pop();
+};
+ */
+
+/* The method push to push element into the stack */
+void Stack :: push(int x)
+{
+        // Your Code
+    StackNode *p;
+    p=new StackNode();
+    p->data=x;
+    p->next=top;
+    top=p;
+}
+
+/*The method pop which return the element poped out of the stack*/
+int Stack :: pop()
+{
+    if(top==NULL)
+       return -1;
+    int val;
+    StackNode *p;
+    p=top;
+    top=p->next;
+    val=p->data;
+    free(p);
+    return val;
+        
+}
