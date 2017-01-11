@@ -1,0 +1,36 @@
+#include <iostream>
+#include<algorithm>
+using namespace std;
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,i,x,j;
+	    cin>>n>>x;
+	    int arr[n];
+	    for(i=0;i<n;i++)
+	    cin>>arr[i];
+	    sort(arr,arr+n);
+	    i=0;
+	    j=n-1;
+	    bool flag=true;
+	    while(i<j && flag)
+	    {
+	        if(arr[i]+arr[j]==x)
+	        {
+	            cout<<"Yes"<<endl;
+	            flag=false;
+	        }
+	        else if(arr[i]+arr[j] < x)
+	         i++;
+	         else
+	         j--;
+	    }
+	    if(flag)
+	    cout<<"No"<<endl;
+	}
+	
+	return 0;
+}
