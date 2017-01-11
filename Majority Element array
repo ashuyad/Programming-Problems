@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,x,i;
+	    cin>>n;
+	    bool flag=false;
+	    int a[105]={0};
+	    for(i=0;i<n;i++)
+	    {
+	        cin>>x;
+	        a[x]++;
+	    }
+	    int count=0;
+	    for(i=0;i<=101;i++)
+	    {
+	        if(a[i]>count)
+	        count=a[i];
+	       if(count>n/2)
+	     {
+	         cout<<i<<endl;
+	         flag=true;
+	         break;
+	    }
+	    }
+	     if(flag==false)
+	     cout<<"NO Majority Element"<<endl;
+	
+	}
+	return 0;
+}
