@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,i,x;
+	    cin>>n;
+	    int sum=0;
+	    for(i=0;i<n-1;i++)
+	    {
+	        cin>>x;
+	        sum=sum+x;
+	    }
+	    int res=(n*(n+1))/2;
+	    res=res-sum;
+	    cout<<res<<endl;
+	}
+	return 0;
+}
